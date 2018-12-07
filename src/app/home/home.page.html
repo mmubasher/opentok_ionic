@@ -6,15 +6,15 @@
     </ion-toolbar>
 </ion-header>
 <ion-content padding>
-    <div class="streams">
-        <div id="publisher"></div>
-        <div id="subscriber"></div>
-    </div>
-    <button class="btn-start-call">
+    <div id="publisher" style="position: relative; z-index: 1;"></div>
+    <div id="subscriber" style="position: relative; z-index: 2;"></div>
+    <ion-button class="btn-start-call" color="success" (click)="startCall()" [disabled]="isCalling">
         Start Call
-    </button>
-    <button class="btn-end-call">
+    </ion-button>
+    <ion-button class="btn-end-call" color="danger" (click)="endCall()" [disabled]="!isCalling">
         End Call
-    </button>
+    </ion-button>
+    <ion-button shape="round" color="light" class="btn-audio" (click)="toggleAudio()"></ion-button>
+    <ion-button shape="round" color="light" class="btn-video" (click)="toggleVideo()"></ion-button>
 </ion-content>
 

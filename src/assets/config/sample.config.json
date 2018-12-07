@@ -1,0 +1,5 @@
+{
+  "apiKey": "your opentok api key here",
+  "sessionId": "your opentok session id here",
+  "token": "your session token here"
+}
