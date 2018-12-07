@@ -22,8 +22,3 @@ Install Android SDK Tools
 | Windows  | [sdk-tools-windows-4333796.zip](https://dl.google.com/android/repository/sdk-tools-windows-4333796.zip) |
 | Mac      | [sdk-tools-darwin-4333796.zip](https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip)      |
 | Linux    | [sdk-tools-linux-4333796.zip](https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip)     |
-
-
-## Authors
-
-* **M Mubasher** - [MMubasher](https://github.com/mmubasher)
