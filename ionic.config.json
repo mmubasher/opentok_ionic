@@ -1,0 +1,7 @@
+{
+  "name": "ot_ionic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
