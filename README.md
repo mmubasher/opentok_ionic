@@ -15,12 +15,12 @@ Download and install NodeJS from: http://nodejs.org. Verify installation using f
 $ node --version
 ```
 
-Install Cordova
+#### Install Cordova
 ```
 $ npm install -g ionic cordova
 ```
 
-<h3>Install Java</h3>
+#### Install Java
 The Android SDK needs the Java Development Kit (JDK) to be installed, version 1.7 or later. Note that the Java Runtime Environment (JRE) is not sufficient, you will need the JDK. To check if you have the JDK installed already, type this on the command line:
 
 javac -version
@@ -61,7 +61,7 @@ If you do not have the JDK installed, proceed as follows:
         <pre>javac -version</pre> If you see a version number you are done with the JDK install!</li>
 </ol>
 
-<h3>Install Android SDK Tools</h3>
+#### Install Android SDK Tools
 
 <p>To install the tools needed to build Android app using Cordova you need the Android SDK Tools. The easiesy way to install these tools is to install Android Studio. Optionally you can install the command line tools only. Follow these steps to install Android Studio:</p>
 <ol>
@@ -121,3 +121,34 @@ If you do not have the JDK installed, proceed as follows:
 	</li>
 </ol>
 
+### Configure Project
+Please add your own OpenTok credentials in project config file. Copy sample configuration file as config.json
+```
+$ cp opentok_ionic/src/assets/config/sample.config.json opentok_ionic/src/assets/config/config.json
+```
+Enter your credentials in opentok_ionic/src/assets/config/config.json from your OpenTok account
+```
+{
+  "apiKey": "your opentok api key here",
+  "sessionId": "your opentok session id here",
+  "token": "your session token here"
+}
+```
+#### Run Project
+
+Clone this repo using 
+```
+$ git clone https://github.com/medappi/opentok_ionic.git
+```
+Install npm modules
+```
+$ npm install
+```
+Prepare for Android
+```
+$ ionic cordova prepare android
+```
+Or attach your android device and run application on it
+```
+$ ionic cordova run android --device
+```
