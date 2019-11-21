@@ -1,6 +1,7 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { AlertController, Platform } from '@ionic/angular';
 import { ConfigService } from '../services/config.service';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 declare var OT: any;
 declare var Cordova: any;
@@ -11,7 +12,7 @@ declare var Cordova: any;
   styleUrls: ['home.page.scss'],
 })
 
-export class HomePage {
+export class HomePage implements OnInit {
 
   isCordovaPlatform = false;
 
@@ -27,12 +28,20 @@ export class HomePage {
   constructor(private platform: Platform,
               private alertCtrl: AlertController,
               private configSrv: ConfigService,
-              private cdr: ChangeDetectorRef) {
+              private cdr: ChangeDetectorRef,
+              private iapp: InAppBrowser) {
     if (this.platform.is('cordova')) {
       this.isCordovaPlatform = true;
     } else {
       this.presentAlert('please run this project on an Android or IOS device');
     }
+  }
+
+  ngOnInit(): void {
+  }
+
+  openBrowser() {
+    var browser = this.iapp.create('https://appr.tc/r/mytest');
   }
 
   startCall(): void {
@@ -62,7 +71,7 @@ export class HomePage {
         OT.updateViews();
       });
       this.connection = this.session.connect(this.configSrv.get().token, () => {
-        const publisherProps = <{ insertMode: string, fitMode: string, showControls: string}>{};
+        const publisherProps = <{ insertMode: string, fitMode: string, showControls: string }>{};
         publisherProps.insertMode = 'append';
         publisherProps.fitMode = 'cover';
         publisherProps.insertMode = 'replace';

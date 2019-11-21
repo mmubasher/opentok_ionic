@@ -6,17 +6,24 @@
     </ion-toolbar>
 </ion-header>
 <ion-content padding>
-    <div id="subscriber"
-         style="width: 80%; height: 83vh; position: absolute; top: 0; right: 0; z-index: 1; pointer-events:none;"></div>
-    <div id="publisher"
-         style="width: 30vh; height: 25vh; position: absolute; top: 0; right: 0; z-index: 5; pointer-events:none;"></div>
-    <ion-button class="btn-start-call" color="success" (click)="startCall()" [disabled]="isCalling">
-        Start Call
-    </ion-button>
-    <ion-button class="btn-end-call" color="danger" (click)="endCall()" [disabled]="!isCalling">
-        End Call
-    </ion-button>
-    <ion-button shape="round" color="light" class="btn-audio" (click)="toggleAudio()"></ion-button>
-    <ion-button shape="round" color="light" class="btn-video" (click)="toggleVideo()"></ion-button>
+    <!--<div id="subscriber"-->
+         <!--style="width: 80%; height: 83vh; position: absolute; top: 0; right: 0; z-index: 1; pointer-events:none;"></div>-->
+    <!--<div id="publisher"-->
+         <!--style="width: 30vh; height: 25vh; position: absolute; top: 0; right: 0; z-index: 5; pointer-events:none;"></div>-->
+    <!--<ion-button class="btn-start-call" color="success" (click)="startCall()" [disabled]="isCalling">-->
+        <!--Start Call-->
+    <!--</ion-button>-->
+    <!--<ion-button class="btn-end-call" color="danger" (click)="endCall()" [disabled]="!isCalling">-->
+        <!--End Call-->
+    <!--</ion-button>-->
+    <!--<ion-button shape="round" color="light" class="btn-audio" (click)="toggleAudio()"></ion-button>-->
+    <!--<ion-button shape="round" color="light" class="btn-video" (click)="toggleVideo()"></ion-button>-->
+
+    <button (click)="openBrowser()">Open Browser</button>
+    <br />
+    <br />
+    <br />
+    <br />
+    <iframe src="https://appr.tc/r/mytest" width="100%"></iframe>
 </ion-content>
 
