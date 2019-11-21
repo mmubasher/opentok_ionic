@@ -77,14 +77,14 @@ export class HomePage {
   toggleAudio(): void {
     if (this.isCalling) {
       if (this.publishAudio === false) {
-        this.publisher.publishAudio = 'true';
+        this.publisher.publishAudio(true);
         this.publishAudio = true;
         console.log('audio turned on');
         return;
       }
       if (this.publishAudio === true) {
         console.log('audio turned off');
-        this.publisher.publishAudio = 'false';
+        this.publisher.publishAudio(false);
         this.publishAudio = false;
       }
     }
@@ -93,13 +93,13 @@ export class HomePage {
   toggleVideo(): void {
     if (this.isCalling) {
       if (this.publishVideo === true) {
-        this.publisher.publishVideo = 'false';
+        this.publisher.publishVideo(false);
         this.publishVideo = false;
         console.log('video turned off');
         return;
       }
       if (this.publishVideo === false) {
-        this.publisher.publishVideo = 'true';
+        this.publisher.publishVideo(true);
         this.publishVideo = true;
         console.log('video turned on');
       }

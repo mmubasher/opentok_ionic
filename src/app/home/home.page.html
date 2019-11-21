@@ -6,8 +6,10 @@
     </ion-toolbar>
 </ion-header>
 <ion-content padding>
-    <div id="publisher" style="position: relative; z-index: 1;"></div>
-    <div id="subscriber" style="position: relative; z-index: 2;"></div>
+    <div id="subscriber"
+         style="width: 80%; height: 83vh; position: absolute; top: 0; right: 0; z-index: 1; pointer-events:none;"></div>
+    <div id="publisher"
+         style="width: 30vh; height: 25vh; position: absolute; top: 0; right: 0; z-index: 5; pointer-events:none;"></div>
     <ion-button class="btn-start-call" color="success" (click)="startCall()" [disabled]="isCalling">
         Start Call
     </ion-button>
